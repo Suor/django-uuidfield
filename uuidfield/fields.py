@@ -105,7 +105,7 @@ class UUIDField(Field):
             value = uuid.hex
         return value
 
-    def get_db_prep_value(self, value, connection, prepared=False):
+    def get_prep_value(self, value):
         """
         Casts uuid.UUID values into the format expected by the back end
         """
